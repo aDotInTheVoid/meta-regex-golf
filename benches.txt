@@ -1,0 +1,35 @@
+=== out/v1_naive ===
+real 2.507300
+user 2.500300
+sys 0.000000
+
+=== out/v2_regex_feats ===
+real 2.473700
+user 2.467400
+sys 0.000000
+
+=== out/v3_cheep_tricks ===
+real 2.289500
+user 2.284600
+sys 0.000000
+
+=== out/v4_inline_never ===
+real 2.254000
+user 2.249300
+sys 0.000000
+
+=== out/v5_cache_regex ===
+real 0.190600
+user 0.180000
+sys 0.007200
+
+=== out/v6_regex_feats ===
+real 0.200600
+user 0.191300
+sys 0.001600
+
+=== out/v7_jemalloc ===
+real 0.171500
+user 0.166800
+sys 0.001700
+
