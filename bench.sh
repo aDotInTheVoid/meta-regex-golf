@@ -23,6 +23,7 @@ avg_time() {
 }
 
 runs=100
+avg_time $runs python norvig.py
 for i in out/*
 do  
     echo === $i ===
