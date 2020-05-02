@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "v1_naive",
+    "v2_regex_feats",
+    "v3_cheep_tricks",
+    "v4_inline_never",
+    "v5_cache_regex",
+    "v6_regex_feats",
+    "v7_jemalloc",
+]
