@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+runs=100
 
 avg_time() {
     #
@@ -22,11 +23,20 @@ avg_time() {
                }'
 }
 
-runs=100
-avg_time $runs python norvig.py
+bench() {
+    echo === $1 $2 ===
+    avg_time $runs $1 $2
+    echo
+}
+
+
+
+for i in *.py
+do
+    bench python3 $i
+done
+
 for i in out/*
 do  
-    echo === $i ===
-    avg_time $runs $i
-    echo 
+    bench $i
 done

@@ -36,7 +36,8 @@ def findregex(winners, losers, k=4):
 
 def matches(regex, strings):
     "Return a set of all the strings that are matched by regex."
-    return {s for s in strings if re.search(regex, s)}
+    searcher = re.compile(regex).search
+    return set(filter(searcher, strings))
 
 OR  = '|'.join # Join a sequence of strings with '|' between them
 cat = ''.join  # Join a sequence of strings with nothing between them
