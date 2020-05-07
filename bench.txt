@@ -1,0 +1,45 @@
+=== python3 norvig_nocache.py ===
+real 1.177380
+user 1.171280
+sys 0.000000
+
+=== python3 norvig_with_cache.py ===
+real 0.785040
+user 0.779820
+sys 0.000000
+
+=== out/v1_naive ===
+real 2.407900
+user 2.401880
+sys 0.000000
+
+=== out/v2_regex_feats ===
+real 2.428660
+user 2.422040
+sys 0.000000
+
+=== out/v3_cheep_tricks ===
+real 2.288340
+user 2.282500
+sys 0.000000
+
+=== out/v4_inline_never ===
+real 2.281600
+user 2.275380
+sys 0.000020
+
+=== out/v5_cache_regex ===
+real 0.190940
+user 0.181220
+sys 0.006680
+
+=== out/v6_regex_feats ===
+real 0.221020
+user 0.213860
+sys 0.001540
+
+=== out/v7_jemalloc ===
+real 0.169620
+user 0.155900
+sys 0.006220
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-runs=100
+runs=500
 
 avg_time() {
     #
