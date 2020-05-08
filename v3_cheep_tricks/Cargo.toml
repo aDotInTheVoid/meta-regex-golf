@@ -14,7 +14,5 @@ codegen-units = 1
 
 [dependencies]
 itertools = "0.9.0"
-[dependencies.regex]
-version = "1.3.0"
-default-features = false
-features = ["std", "perf"]
+regex = "1.3.0"
+

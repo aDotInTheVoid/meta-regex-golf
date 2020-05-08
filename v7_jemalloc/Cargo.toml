@@ -14,12 +14,7 @@ codegen-units = 1
 
 [dependencies]
 itertools = "0.9.0"
-[dependencies.regex]
-version = "1.3.0"
-default-features = false
-features = ["std", "perf"]
-#default-features = false
-#features = ["std", "perf-cache", "perf-literal"]
+regex = "1.3.0"
 
 [target.'cfg(not(target_env = "msvc"))'.dependencies]
 jemallocator = "0.3.2"
