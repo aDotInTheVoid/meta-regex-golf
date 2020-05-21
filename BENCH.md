@@ -1,14 +1,15 @@
 Benchmarked with 
 `hyperfine -w 3 -m 500 --export-markdown BENCH.md "python3 norvig_nocache.py" "python3 norvig_with_cache.py" out/*`
 
-rustc 1.43.1 (8d69840ab 2020-05-04)
-Python 3.7.7
-hyperfine 1.6.0
-Fedora 31 (Workstation Edition) x86_64
-Linux 5.6.13-200.fc31.x86_64
-glibc-2.30-11.fc31.x86_64
-Intel i7-2700K (8) @ 3.900GHz
-7922MiB
+## System Details
+- rustc 1.43.1 (8d69840ab 2020-05-04)
+- Python 3.7.7
+- hyperfine 1.6.0
+- Fedora 31 (Workstation Edition) x86_64
+- Linux 5.6.13-200.fc31.x86_64
+- glibc-2.30-11.fc31.x86_64
+- Intel i7-2700K (8) @ 3.900GHz, 7922MiB Ram (as reported by neofetch)
+
 All packages up to date as of Thu 21 May 2020 12:03:04 BST
 
 | Command | Mean [s] | Min [s] | Max [s] | Relative |
