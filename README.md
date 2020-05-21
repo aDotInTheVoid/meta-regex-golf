@@ -1,13 +1,15 @@
 # Metaregex benchmarks
 
+Code for [this blog post](https://adotinthevoid.github.io/posts/2020/05/metaregex-python-can-be-fast-too/)
+
 Each version is a separate project as they have different options
 
-To run the benchmarks
+To run the benchmarks with [hyperfine](https://github.com/sharkdp/hyperfine)
 ```
 ./build.sh
-./bench.sh
+hyperfine "python3 norvig_nocache.py" "python3 norvig_with_cache.py" out/*
 ```
-You may want to change `$runs` in `bench.sh` to something lower.
+
 
 ## History
 The numbering isn't continuous, as the following projects were removed
@@ -21,11 +23,13 @@ They were just too much, and were slightly slower.
 
 ## Results
 
-|  | Real | User | Sys |
-|--|------|------|-----|
-| python3 norvig_nocache.py | 1.181500 | 1.175260 | 0.000000 |
-| python3 norvig_with_cache.py | 0.790220 | 0.784960 | 0.000000 |
-| out/v1_naive | 2.395320 | 2.388920 | 0.000000 |
-| out/v3_cheep_tricks | 2.289380 | 2.283400 | 0.000000 |
-| out/v5_cache_regex | 0.190640 | 0.179840 | 0.005660 |
-| out/v7_jemalloc | 0.163220 | 0.153220 | 0.006380 |
+For detailed results see [BENCH.md](./BENCH.md)
+
+| Command | Mean [s] | Min [s] | Max [s] | Relative |
+|:---|---:|---:|---:|---:|
+| `python3 norvig_nocache.py` | 1.186 ± 0.013 | 1.161 | 1.252 | 7.0 |
+| `python3 norvig_with_cache.py` | 0.789 ± 0.010 | 0.771 | 0.821 | 4.7 |
+| `out/v1_naive` | 2.426 ± 0.070 | 2.227 | 2.692 | 14.3 |
+| `out/v3_cheep_tricks` | 2.317 ± 0.068 | 2.148 | 2.587 | 13.7 |
+| `out/v5_cache_regex` | 0.194 ± 0.002 | 0.191 | 0.206 | 1.1 |
+| `out/v7_jemalloc` | 0.169 ± 0.002 | 0.166 | 0.180 | 1.0 |
